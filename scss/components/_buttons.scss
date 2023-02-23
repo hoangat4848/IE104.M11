@@ -3,21 +3,24 @@
 
 .btn {
   font-weight: bold;
-  font-family: "Futura Bold", "Lato", Arial, Helvetica, sans-serif;
+  font-family: "Futura Bold";
+  transition: all 400ms ease;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
+// .btn-primary:hover,
+// .btn-primary:focus,
+// .btn-primary:active,
+// .btn-primary.active,
+// .open > .dropdown-toggle.btn-primary {
+//   color: $primary;
+//   background-color: $secondary;
+//   border-color: $primary;
+// }
+
+.btn-primary:hover {
   color: $primary;
   background-color: $secondary;
   border-color: $primary;
-}
-
-.btn-secondary {
-  color: $dark;
 }
 
 .btn-secondary:hover,
@@ -30,10 +33,14 @@
   border-color: $dark;
 }
 
-.btn-link:hover,
-.btn-link:focus,
-.btn-link:active,
-.btn-link.active,
-.open > .dropdown-toggle.btn-link {
+// .btn-link:hover,
+// .btn-link:focus,
+// .btn-link:active,
+// .btn-link.active,
+// .open > .dropdown-toggle.btn-link {
+//   color: $secondary;
+// }
+
+.btn-link:hover {
   color: $secondary;
 }

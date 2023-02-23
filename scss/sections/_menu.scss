@@ -1,0 +1,50 @@
+@use "../custom" as *;
+@use "../utils/mixins" as m;
+
+.menu {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#menuNav {
+  .nav {
+    border-bottom: 1px solid #6c757d;
+    overflow-y: hidden;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  // Remove horizontal padding from large breakpoint
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
+
+  .nav-link {
+    background-color: transparent;
+
+    font-size: m.rem(23);
+    font-weight: bold;
+    font-family: "Futura Bold", Arial, Helvetica, sans-serif;
+    background: url(../../assets/images/white.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    border: none;
+    transition: all 0.2s;
+
+    &:hover,
+    &:focus,
+    &.active {
+      outline: none;
+      border: none;
+      background: none;
+      color: $blue;
+    }
+  }
+}
+
+#menuContent {
+  .tab-pane.active {
+    animation: slide-from-right 0.6s ease-in-out;
+  }
+}

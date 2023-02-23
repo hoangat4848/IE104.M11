@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0ec71743ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Checkout</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <link rel="stylesheet" href="./assets/css/style-custom.min.css" />
+  </head>
+  <body>
+    <!-- Sub Navbar -->
+    <nav class="subNavbar bg-primary navbar-expand-md" id="subNavbar">
+      <div class="container-lg">
+        <button
+          class="navbar-toggler text-secondary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#subNavbarNav"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle sub navigation"
+        >
+          <ion-icon
+            name="menu-sharp"
+            class="custom-navbar-toggler-icon"
+          ></ion-icon>
+        </button>
+        <div class="navbar-collapse collapse" id="subNavbarNav">
+          <ul
+            class="navbar-nav flex-md-row flex-column justify-content-end w-100"
+          >
+            <li class="nav-item me-3">
+              <div class="nav-link link-secondary">
+                <ion-icon name="call-sharp"></ion-icon> +012456789
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link link-secondary">
+                <ion-icon name="mail-sharp"></ion-icon>
+                chiizza@chiizza.com
+              </div>
+            </li>
+            <li class="nav-item ms-md-auto me-3">
+              <a class="nav-link link-secondary" href="faq.html">
+                <ion-icon name="help-circle-sharp"></ion-icon>
+                <span class="d-md-none">Faq</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-secondary" href="login.html">
+                <ion-icon name="log-in-sharp"></ion-icon>
+                <span class="d-md-none">Login</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of subNavbar -->
+    <!-- HEADER NAVIGATION -->
+    <header class="mainNavbar">
+      <nav class="navbar navbar-expand-lg bg-white fw-bolder py-3">
+        <div class="container-lg">
+          <!-- Hamburger button for mobile devices -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternal"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <ion-icon
+              name="menu-sharp"
+              class="custom-navbar-toggler-icon"
+            ></ion-icon>
+          </button>
+
+          <!-- Navbar brand (LOGO) -->
+          <a class="navbar-brand me-auto me-lg-5 text-primary" href="index.html"
+            ><img src="assets/images/logo.svg" alt="Chiizza logo" width="100"
+          /></a>
+
+          <!-- Navbar collapse hide for mobile devicess -->
+          <div class="navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">MENU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blogs.html">BLOGS</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Header cart -->
+          <a href="checkout.html" class="header-cart d-none">
+            <ion-icon name="cart-outline"></ion-icon>
+            <span class="cart-number"></span>
+          </a>
+
+          <!-- ORDER NOW button -->
+          <a href="menu.html" class="btn-lg"
+            ><button class="btn btn-primary" type="button">ORDER NOW</button></a
+          >
+        </div>
+      </nav>
+
+      <!-- External navigation show when click the navbar toggler (used for mobile) -->
+      <div
+        class="navbar-external-collapse collapse bg-primary fw-bolder pt-5"
+        id="navbarToggleExternal"
+      >
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">MENU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blogs.html">BLOG</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- PAGE CONTENT -->
+    <main class="page-content-container bg-dark min-vh-100">
+      <!-- CHECKOUT SECTION -->
+
+      <section class="checkout container-lg">
+        <h2 class="title-primary display-5 text-uppercase">Checkout</h2>
+        <div class="row">
+          <!-- Checkout cart -->
+          <div class="col-lg-6 text-light">
+            <h3>Your cart</h3>
+            <table class="table table-dark">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Food</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody class="cart-container">
+                <!-- <tr class="cart-item">
+                  <td>
+                    <button class="remove-cart-btn btn btn-sm btn-link">
+                      <ion-icon name="trash-sharp"></ion-icon>
+                    </button>
+                  </td>
+                  <td class="cart-name">Spicy Fried Chicken</td>
+                  <td>Otto</td>
+                  <td class="cart-price">@mdo</td>
+                </tr> -->
+              </tbody>
+            </table>
+            <p class="cart-total-price text-end">Total: <span></span></p>
+          </div>
+
+          <!-- Checkout bill info -->
+          <div class="col-lg-6">
+            <div class="checkout-info text-light">
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <h3>Billing Info</h3>
+
+                  <!-- First Name -->
+                  <div class="col-md-6">
+                    <label for="ck-firstName" class="form-label"
+                      >First Name</label
+                    >
+                    <input
+                      type="text"
+                      id="ck-firstName"
+                      class="form-control"
+                      placeholder="First name"
+                      required
+                    />
+
+                    <div class="invalid-feedback">
+                      Please enter your first name.
+                    </div>
+                  </div>
+
+                  <!-- Last Name -->
+                  <div class="col-md-6">
+                    <label for="ck-lastName" class="form-label"
+                      >Last Name</label
+                    >
+                    <input
+                      type="text"
+                      id="ck-lastName"
+                      class="form-control"
+                      placeholder="Last name"
+                      required
+                    />
+
+                    <div class="invalid-feedback">
+                      Please enter your last name.
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-12">
+                    <label for="ck-email" class="form-label">
+                      Email address
+                    </label>
+
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        id="ck-email"
+                        class="form-control"
+                        placeholder="Email address"
+                        required
+                      />
+                      <span class="input-group-text text-muted"
+                        >abc@chizza.com</span
+                      >
+
+                      <div class="invalid-feedback">
+                        Please enter your email address or your email is
+                        invalid.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="ck-tel" class="form-label"> Telephone </label>
+                    <input type="tel" class="form-control" required />
+                    <div class="invalid-feedback">
+                      Please enter your telephone number.
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <h3>Payment Methods</h3>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="ck-payment"
+                      id="ck-paymentCredit"
+                    />
+                    <label class="form-check-label" for="ck-paymentCredit">
+                      Credit card
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="ck-payment"
+                      id="ck-paymentCash"
+                      required
+                      value="cash"
+                    />
+                    <label class="form-check-label" for="ck-paymentCash">
+                      Cash
+                    </label>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <div class="col-12">
+                    <label for="ck-note" class="form-label">
+                      Any specific notes for the order?
+                    </label>
+
+                    <textarea
+                      id="ck-note"
+                      class="form-control"
+                      rows="2"
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <button
+                      class="btn btn-primary text-uppercase"
+                      type="submit"
+                    >
+                      Place order!
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- END OF CHECKOUT SECTION -->
+    </main>
+    <!-- END OF PAGE CONTENT -->
+
+    <!-- SCRIPT -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/checkValidForm.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+    <!-- Ionic Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

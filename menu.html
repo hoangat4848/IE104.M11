@@ -4,11 +4,66 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/0ec71743ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Menu</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <link rel="stylesheet" href="./assets/css/style-custom.min.css" />
   </head>
   <body>
-    <!-- NAVIGATION -->
+    <!-- Sub Navbar -->
+    <nav class="subNavbar bg-primary navbar-expand-md" id="subNavbar">
+      <div class="container-lg">
+        <button
+          class="navbar-toggler text-secondary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#subNavbarNav"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle sub navigation"
+        >
+          <ion-icon
+            name="menu-sharp"
+            class="custom-navbar-toggler-icon"
+          ></ion-icon>
+        </button>
+        <div class="navbar-collapse collapse" id="subNavbarNav">
+          <ul
+            class="navbar-nav flex-md-row flex-column justify-content-end w-100"
+          >
+            <li class="nav-item me-3">
+              <div class="nav-link link-secondary">
+                <ion-icon name="call-sharp"></ion-icon> +012456789
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link link-secondary">
+                <ion-icon name="mail-sharp"></ion-icon>
+                chiizza@chiizza.com
+              </div>
+            </li>
+            <li class="nav-item ms-md-auto me-3">
+              <a class="nav-link link-secondary" href="faq.html">
+                <ion-icon name="help-circle-sharp"></ion-icon>
+                <span class="d-md-none">Faq</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-secondary" href="login.html">
+                <ion-icon name="log-in-sharp"></ion-icon>
+                <span class="d-md-none">Login</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of subNavbar -->
+    <!-- HEADER NAVIGATION -->
     <header class="mainNavbar">
       <nav class="navbar navbar-expand-lg bg-white fw-bolder py-3">
         <div class="container-lg">
@@ -30,8 +85,8 @@
 
           <!-- Navbar brand (LOGO) -->
           <a class="navbar-brand me-auto me-lg-5 text-primary" href="index.html"
-            >LOGO</a
-          >
+            ><img src="assets/images/logo.svg" alt="Chiizza logo" width="100"
+          /></a>
 
           <!-- Navbar collapse hide for mobile devicess -->
           <div class="navbar-collapse">
@@ -40,163 +95,768 @@
                 <a class="nav-link active" href="menu.html">MENU</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">LOCATIONS</a>
+                <a class="nav-link" href="contact.html">CONTACT</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">ABOUT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">BLOGS</a>
+                <a class="nav-link" href="blogs.html">BLOGS</a>
               </li>
             </ul>
           </div>
 
+          <!-- Header cart -->
+          <a href="checkout.html" class="header-cart">
+            <ion-icon name="cart-outline"></ion-icon>
+            <span class="cart-number"></span>
+          </a>
+
           <!-- ORDER NOW button -->
-          <button class="btn btn-primary btn-lg" type="button">
-            ORDER NOW
-          </button>
+          <a href="menu.html" class="btn-lg"
+            ><button class="btn btn-primary" type="button">ORDER NOW</button></a
+          >
         </div>
       </nav>
 
       <!-- External navigation show when click the navbar toggler (used for mobile) -->
       <div
-        class="navbar-external-collapse bg-primary fw-bolder pt-5"
+        class="navbar-external-collapse collapse bg-primary fw-bolder pt-5"
         id="navbarToggleExternal"
       >
         <ul class="navbar-nav align-items-center">
           <li class="nav-item">
-            <a class="nav-link" href="#">MENU</a>
+            <a class="nav-link active" href="menu.html">MENU</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">LOCATIONS</a>
+            <a class="nav-link" href="contact.html">CONTACT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="about.html">ABOUT</a>
+            <a class="nav-link" href="about.html">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">BLOG</a>
+            <a class="nav-link" href="blogs.html">BLOG</a>
           </li>
         </ul>
       </div>
     </header>
-    <!-- END OF NAVIGATION -->
+    <!-- END OF HEADER -->
 
-    <!-- Page content -->
-    <section class="page-content-container">
-      <!-- PAGE TITLE SECTION -->
-      <section class="page-intro bg-dark text-light py-4">
-        <div class="container-lg">
-          <div class="row text-center text-lg-start">
-            <div class="col-lg-4">
-              <h2 class="page-intro-title text-secondary h3">Menu</h2>
-            </div>
+    <!-- START OF MENU SECTION -->
 
-            <!-- Show for PC only -->
-            <div class="col-lg-8 d-none d-lg-block">
-              <div class="row">
-                <div class="col-3 fw-bold page-intro-item">
-                  <h3 class="text-primary h5 page-intro-feature">
-                    Ho Chi Minh City
-                  </h3>
-                  <p class="page-intro-text">Sun-Wed 11AM to 10PM</p>
-                  <p class="page-intro-text">Thur-Sat 11AM to LATE</p>
-                </div>
-                <div class="col-3 fw-bold page-intro-item">
-                  <h3 class="text-primary h5 page-intro-feature">Ha Noi</h3>
-                  <p class="page-intro-text">Sun-Wed 11AM to 10PM</p>
-                  <p class="page-intro-text">Thur-Sat 11AM to LATE</p>
-                </div>
-                <div class="col-3 fw-bold page-intro-item">
-                  <h3 class="text-primary h5 page-intro-feature">Delivery</h3>
-                  <p class="page-intro-text">Sun-Wed 11AM to 10PM</p>
-                  <p class="page-intro-text">Thur-Sat 11AM to LATE</p>
-                </div>
-                <div class="col-3 fw-bold page-intro-item">
-                  <h3 class="text-primary h5 page-intro-feature">SOCIAL</h3>
-                  <ul class="page-intro-social">
-                    <li class="page-intro-icon"></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Show for mobile only -->
-            <div class="d-lg-none col">
-              <h4 class="text-primary page-intro-feature">Locations</h4>
-              <p class="fw-bold mb-0">
-                Ho Chi Minh City:
-                <a
-                  href="tel:0123456789"
-                  class="text-primary text-decoration-none page-intro-text"
-                  >0123.456.789</a
-                >
-              </p>
-              <p class="fw-bold mb-0">
-                Ha Noi:
-                <a
-                  href="tel:0123456789"
-                  class="text-primary text-decoration-none page-intro-text"
-                  >0123.456.789</a
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MENU SECTION -->
-
-      <!-- Menu navbar -->
-
-      <section class="menu bg-dark text-secondary">
-        <div class="container">
-          <nav class="menuMainNav nav nav-pills bg-dark" role="tablist">
+    <section class="menu bg-dark text-secondary">
+      <div class="container-lg">
+        <!-- Menu Navigation -->
+        <nav id="menuNav" class="sticky-top bg-dark">
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <button
               class="nav-link active"
+              id="menu-chicken-tab"
               data-bs-toggle="tab"
-              data-bs-target="#chicken"
-              aria-controls="nav-chicken"
+              data-bs-target="#menu-chicken"
+              type="button"
+              role="tab"
+              aria-controls="nav-home"
               aria-selected="true"
             >
               Chicken
             </button>
             <button
               class="nav-link"
+              id="menu-pizza-tab"
               data-bs-toggle="tab"
-              data-bs-target="#pizza"
-              aria-controls="nav-pizza"
+              data-bs-target="#menu-pizza"
+              type="button"
+              role="tab"
+              aria-controls="nav-profile"
               aria-selected="false"
             >
               Pizza
             </button>
-          </nav>
-          <!-- Menu content -->
-          <div class="tab-content">
-            <div class="tab-pane fade show active" id="chicken" role="tabpanel">
-              asdsad
-            </div>
-            <div class="tab-pane fade" id="pizza" role="tabpanel">ahaha</div>
+            <button
+              class="nav-link"
+              id="nav-contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#menu-drinks"
+              type="button"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+            >
+              Drinks
+            </button>
           </div>
-        </div>
-      </section>
+        </nav>
 
-      <!-- END OF MENU SECTION -->
+        <!-- MENU CONTENT -->
+        <div class="tab-content" id="menuContent">
+          <!-- Chicken Tab -->
+          <div
+            class="tab-pane fade show active"
+            id="menu-chicken"
+            role="tabpanel"
+            aria-labelledby="menu-chicken-tab"
+          >
+            <!-- Tab content -->
+            <div class="row row-cols-md-2 row-cols-lg-3 py-3 g-md-3 gy-3">
+              <!-- PRODUCT GO FROM HERE -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/original-fried-chicken.jpg"
+                        alt="Og Fried Chicken"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Og Fried Chicken
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">5$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/cream-sauce-chicken.jpg"
+                        alt="Cream sauce chicken"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Cream sauce chicken
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">7$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/baby-ball-chicken.jpg"
+                        alt="Baby ball chicken"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Baby ball chicken
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">6$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/crispy-chicken-bar.jpg"
+                        alt="Crispy chicken bar"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Crispy chicken bar
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">6$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/pasta-chicken.jpg"
+                        alt="Pasta chicken"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Pasta chicken
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">8$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/rice-chicken.jpg"
+                        alt="Vietnamese rice chicken"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Vietnamese rice chicken
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">8$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+            </div>
+            <!-- End of Tab content -->
+          </div>
+          <!-- End of Chicken Tab -->
+
+          <!-- Pizza Tab -->
+          <div
+            class="tab-pane fade"
+            id="menu-pizza"
+            role="tabpanel"
+            aria-labelledby="menu-pizza-tab"
+          >
+            <!-- Tab content -->
+            <div class="row row-cols-md-2 row-cols-lg-3 py-3 g-md-3 gy-3">
+              <!-- PRODUCT GO FROM HERE -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <a href="product.html" class="stretched-link"></a>
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/pepperoni-pizza.jpg"
+                        alt="Pepperoni pizza"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title">Pepperoni Pizza</h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">7$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/pineapple-pizza.jpg"
+                        alt="Pineapple pizza"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Juicy Pineapple Pizza
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">8$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/ultimate-vegan-pizza.jpg"
+                        alt="Vegan Pizza"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Ultimate Vegan Pizza
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">9$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/vegetable-pizza.jpg"
+                        alt="Vegetable Pizza"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Vegetable Pizza
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">5$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/spinach-pizza.jpg"
+                        alt="Spinach Pizza"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Spinach Pizza
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">6$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/double-cheese-spicy-pizza.jpg"
+                        alt="Double cheese spicy pizza"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Double cheese spicy pizza
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">10$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/double-bacon-pizza.jpg"
+                        alt="Double bacon pizza"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Double bacon pizza
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">10$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/vegan-pizza.jpg"
+                        alt="Vegan Pizza"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Vegan Pizza
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">6$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+            </div>
+            <!-- End of Tab content -->
+          </div>
+          <!-- End of Pizza Tab -->
+
+          <!-- Drinks Tab -->
+          <div
+            class="tab-pane fade"
+            id="menu-drinks"
+            role="tabpanel"
+            aria-labelledby="menu-drinks-tab"
+          >
+            <!-- Tab content -->
+            <div class="row row-cols-md-2 row-cols-lg-3 py-3 g-md-3 gy-3">
+              <!-- PRODUCT GO FROM HERE -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/strawberry-soda.jpg"
+                        alt="Strawberry soda"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          Strawberry soda
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">4$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+
+              <!-- Product card -->
+              <div class="col">
+                <div class="product-card card">
+                  <div class="position-relative">
+                    <!-- <a href="product.html" class="stretched-link"></a> -->
+                    <figure class="product-card--img overflow-hidden">
+                      <img
+                        class="card-img-top"
+                        src="assets/images/product/schweppes.jpg"
+                        alt="schweppes"
+                      />
+                      <div class="card-img-overlay">View more..</div>
+                    </figure>
+                    <div class="product-card-body card-body">
+                      <div class="product-card--info">
+                        <h4 class="product-card--title text-truncate">
+                          schweppes
+                        </h4>
+                        <p class="product-card--desc text-truncate">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptate nisi, accusamus libero quibusdam eaque
+                          ducimus ipsa dignissimos nam dolor, voluptatem
+                          pariatur voluptates tempore odit nostrum.
+                        </p>
+                      </div>
+                      <div class="product-card--price">
+                        <span class="text-muted">price</span>
+                        <span class="h4">4$</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary add-cart">
+                    <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                  </button>
+                </div>
+              </div>
+              <!-- End of Product card -->
+            </div>
+            <!-- End of Tab content -->
+          </div>
+          <!-- End of Drinks Tab -->
+        </div>
+      </div>
     </section>
 
-    <!-- SCRIPTS -->
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-      integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
-      integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
-      crossorigin="anonymous"
-    ></script> -->
+    <!-- SCROLL UP BUTTON -->
+    <button type="button" class="btn btn-outline-primary" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- END SCROLL UP BUTTON -->
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <!-- Ionic Icons -->
+    <!-- SCRIPTS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/checkValidForm.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+    <!-- Ionic icon -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"

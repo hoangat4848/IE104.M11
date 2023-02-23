@@ -16,7 +16,7 @@
 
   .hero-caption {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     // padding-bottom: 4rem;
     // skew the caption container
     transform: skewY(-1.75deg);
@@ -30,15 +30,22 @@
   }
 
   .hero-text {
-    font-family: "Lato", sans-serif;
-    // font-size: 6.5rem;
-    // font-weight: 900;
-    // line-height: 5rem;
+    @include media-breakpoint-up(md) {
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 6.5rem;
+      font-weight: 900;
+      line-height: 5rem;
+    }
 
     &--fill {
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
-      background-image: url(/assets/images/white.png);
+      background-image: url(../../assets/images/white.png);
       background-position: center;
       background-size: cover;
       color: $white;
@@ -56,17 +63,8 @@
     }
   }
 
-  @include media-breakpoint-up(lg) {
-    .hero-text {
-      font-size: 6.5rem;
-      font-weight: 900;
-      line-height: 5rem;
-    }
-  }
-
   .hero-action {
     font-size: 1.5rem;
-    font-family: "Lato", sans-serif;
   }
 
   .hero-action-btn {

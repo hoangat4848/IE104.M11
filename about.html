@@ -4,11 +4,67 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/0ec71743ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>About</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <link rel="stylesheet" href="./assets/css/style-custom.min.css" />
   </head>
   <body>
-    <!-- NAVIGATION -->
+    <!-- Sub Navbar -->
+    <nav class="subNavbar bg-primary navbar-expand-md" id="subNavbar">
+      <div class="container-lg">
+        <button
+          class="navbar-toggler text-secondary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#subNavbarNav"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle sub navigation"
+        >
+          <ion-icon
+            name="menu-sharp"
+            class="custom-navbar-toggler-icon"
+          ></ion-icon>
+        </button>
+        <div class="navbar-collapse collapse" id="subNavbarNav">
+          <ul
+            class="navbar-nav flex-md-row flex-column justify-content-end w-100"
+          >
+            <li class="nav-item me-3">
+              <div class="nav-link link-secondary">
+                <ion-icon name="call-sharp"></ion-icon> +012456789
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link link-secondary">
+                <ion-icon name="mail-sharp"></ion-icon>
+                chiizza@chiizza.com
+              </div>
+            </li>
+            <li class="nav-item ms-md-auto me-3">
+              <a class="nav-link link-secondary" href="faq.html">
+                <ion-icon name="help-circle-sharp"></ion-icon>
+                <span class="d-md-none">Faq</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-secondary" href="login.html">
+                <ion-icon name="log-in-sharp"></ion-icon>
+                <span class="d-md-none">Login</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of subNavbar -->
+
+    <!-- HEADER NAVIGATION -->
     <header class="mainNavbar">
       <nav class="navbar navbar-expand-lg bg-white fw-bolder py-3">
         <div class="container-lg">
@@ -30,8 +86,8 @@
 
           <!-- Navbar brand (LOGO) -->
           <a class="navbar-brand me-auto me-lg-5 text-primary" href="index.html"
-            >LOGO</a
-          >
+            ><img src="assets/images/logo.svg" alt="Chiizza logo" width="100"
+          /></a>
 
           <!-- Navbar collapse hide for mobile devicess -->
           <div class="navbar-collapse">
@@ -40,46 +96,52 @@
                 <a class="nav-link" href="menu.html">MENU</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">LOCATIONS</a>
+                <a class="nav-link" href="contact.html">CONTACT</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="about.html">ABOUT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">BLOGS</a>
+                <a class="nav-link" href="blogs.html">BLOGS</a>
               </li>
             </ul>
           </div>
 
+          <!-- Header cart -->
+          <a href="checkout.html" class="header-cart">
+            <ion-icon name="cart-outline"></ion-icon>
+            <span class="cart-number"></span>
+          </a>
+
           <!-- ORDER NOW button -->
-          <button class="btn btn-primary btn-lg" type="button">
-            ORDER NOW
-          </button>
+          <a href="menu.html" class="btn-lg"
+            ><button class="btn btn-primary" type="button">ORDER NOW</button></a
+          >
         </div>
       </nav>
 
       <!-- External navigation show when click the navbar toggler (used for mobile) -->
       <div
-        class="navbar-external-collapse bg-primary fw-bolder pt-5"
+        class="navbar-external-collapse collapse bg-primary fw-bolder pt-5"
         id="navbarToggleExternal"
       >
         <ul class="navbar-nav align-items-center">
           <li class="nav-item">
-            <a class="nav-link" href="#">MENU</a>
+            <a class="nav-link" href="menu.html">MENU</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">LOCATIONS</a>
+            <a class="nav-link" href="contact.html">CONTACT</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="about.html">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">BLOG</a>
+            <a class="nav-link" href="blogs.html">BLOG</a>
           </li>
         </ul>
       </div>
     </header>
-    <!-- END OF NAVIGATION -->
+    <!-- END OF HEADER -->
 
     <main class="page-content-container">
       <!-- PAGE TITLE SECTION -->
@@ -113,7 +175,26 @@
                 <div class="col-3 fw-bold page-intro-item">
                   <h3 class="text-primary h5 page-intro-feature">SOCIAL</h3>
                   <ul class="page-intro-social">
-                    <li class="page-intro-icon"></li>
+                    <li class="page-intro-icon">
+                      <a href="#" class="btn btn-link"
+                        ><i class="fab fa-facebook"></i
+                      ></a>
+                    </li>
+                    <li class="page-intro-icon">
+                      <a href="#" class="btn btn-link"
+                        ><i class="fab fa-twitter"></i
+                      ></a>
+                    </li>
+                    <li class="page-intro-icon">
+                      <a href="#" class="btn btn-link"
+                        ><i class="fab fa-google-plus-g"></i
+                      ></a>
+                    </li>
+                    <li class="page-intro-icon">
+                      <a href="#" class="btn btn-link"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -220,8 +301,153 @@
       </div>
     </article>
 
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-top bg-dark text-secondary">
+        <div class="container-fluid">
+          <div class="row text-center text-lg-start">
+            <div
+              class="col-lg-4 footer-about px-4 pt-4 wow fadeInUp animated"
+              style="visibility: visible; animation-name: fadeInUp"
+            >
+              <a
+                class="navbar-brand me-auto me-lg-5 text-primary"
+                href="index.html"
+                >CHIIZZA</a
+              >
+              <div class="insta-container">
+                <img
+                  src="./assets/images/blog-article-2.jpg"
+                  alt="Food counter"
+                />
+              </div>
+              <p><a class="btn btn-link" href="#">View more on instagram</a></p>
+              <h3 class="page-intro-title">Follow us</h3>
+              <p>
+                <a href="#" class="btn btn-link"
+                  ><ion-icon name="logo-facebook"></ion-icon
+                ></a>
+                <a href="#" class="btn btn-link"
+                  ><ion-icon name="logo-twitter"></ion-icon
+                ></a>
+                <a href="#" class="btn btn-link"
+                  ><ion-icon name="logo-google"></ion-icon
+                ></a>
+                <a href="#" class="btn btn-link"
+                  ><ion-icon name="logo-instagram"></ion-icon
+                ></a>
+              </p>
+            </div>
+            <div
+              class="col-lg-4 footer-customer footer-image-container p-0"
+              style="visibility: visible; animation-name: fadeInDown"
+            >
+              <img
+                src="./assets/images/blog-article-1.jpg"
+                alt=""
+                class="card-img-top cusomer-image"
+              />
+              <div class="customer-middle">
+                <a class="navbar-brand me-auto text-light" href="index.html"
+                  ><img
+                    src="assets/images/logo.svg"
+                    alt="Chiizza logo"
+                    width="300"
+                /></a>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 footer-social p-4 wow fadeInUp animated"
+              style="visibility: visible; animation-name: fadeInUp"
+            >
+              <h3 class="pb-3">Contact</h3>
+              <p>
+                <ion-icon name="location-sharp"></ion-icon> Khu pho 6, Thu Duc,
+                Ho Chi Minh City, Vietnam
+              </p>
+              <p><ion-icon name="call-sharp"></ion-icon> Phone: +012456789</p>
+              <p>
+                <ion-icon name="mail-sharp"></ion-icon> Email:
+                <a href="chiizzatastesogud@chiizza.com" class="btn btn-link"
+                  >chiizza@chiizza.com</a
+                >
+              </p>
+              <p>
+                <ion-icon name="logo-skype"></ion-icon> Skype: chiizza_online
+              </p>
+              <h3 class="pb-3">About Shopper</h3>
+              <form class="d-flex">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-primary" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="footer-bottom bg-primary text-secondary text-center fw-bolder py-3"
+      >
+        <div class="container-lg">
+          <div class="row">
+            <div class="col-lg-5 footer-copyright">
+              <p>
+                © Website by
+                <a href="index.html">CHIIZZA</a>
+              </p>
+            </div>
+            <div class="col-lg-7 footer-menu">
+              <nav class="navbar navbar-dark navbar-expand-lg">
+                <div id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link scroll-link" href="menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link scroll-link" href="contact.html"
+                        >Contact</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link scroll-link" href="about.html"
+                        >About</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link scroll-link" href="blogs.html"
+                        >Blogs</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- SCROLL UP BUTTON -->
+    <button type="button" class="btn btn-outline-primary" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- END SCROLL UP BUTTON -->
+
     <!-- SCRIPTS -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/checkValidForm.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script type="text/javascript" src="assets/js/scrollUp.js"></script>
+
     <!-- Ionic Icons -->
     <script
       type="module"

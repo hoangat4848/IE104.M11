@@ -1,0 +1,34 @@
+@use "../custom" as *;
+@use "../utils/mixins" as m;
+@use "sass:math";
+
+.product {
+  .product-simg-group {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: space-between;
+    gap: $spacer;
+
+    .product-small-img {
+      width: calc((100% - $spacer * 2) / 3);
+      flex-shrink: 0;
+    }
+
+    img {
+      width: 100%;
+      max-height: m.rem(500);
+      background-color: rbga($black, 0.5);
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .productQuantity {
+    border: none;
+  }
+}

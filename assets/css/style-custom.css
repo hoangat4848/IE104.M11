@@ -1,0 +1,263 @@
+ul li {
+  list-style-type: none;
+}
+
+/*FOOTER*/
+.page-intro-social {
+  color: white;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: auto;
+}
+
+.page-intro-social .btn-link {
+  color: white;
+}
+
+.page-intro-social .btn-link:hover {
+  color: #e2173d;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(255 255 255);
+}
+.footer-customer {
+  background: white;
+}
+.footer-customer img {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+@media (max-width: 576px) {
+  .footer-customer {
+    display: none;
+  }
+  .footer-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-menu .navbar {
+    display: block;
+  }
+}
+
+.footer-copyright p {
+  margin-top: 20px;
+}
+.footer-copyright a {
+  color: white;
+}
+
+.customer-middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.footer-image-container {
+  position: relative;
+}
+.footer-image-container:hover .cusomer-image {
+  opacity: 0.3;
+}
+
+.footer-image-container:hover .customer-middle {
+  opacity: 1;
+}
+
+.cusomer-image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+/*END FOOTER*/
+
+/*CONTACT*/
+#map-canvas {
+  height: 400px;
+  width: 100%;
+}
+#container-map-canvas {
+  position: relative;
+  z-index: 10;
+}
+.insta-container img {
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 2px 2px rgba(108, 117, 125, 0.4);
+  background: white;
+}
+
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+/*END CONTACT*/
+
+/*BLOG*/
+.blog-post-area .post-meta ul li {
+  background: #f0f0e9;
+  float: left;
+  margin-right: 10px;
+  padding: 0 5px;
+  color: #393b3b;
+  position: relative;
+}
+.blog-post-area .post-meta ul li i {
+  background: #e2173d;
+  color: #fff;
+  margin-left: -4px;
+  margin-right: 7px;
+  padding: 4px 7px;
+}
+.post-meta {
+  margin-bottom: 25px;
+}
+.post-meta span {
+  float: right;
+}
+.post-meta span i {
+  color: #e2173d;
+}
+.blog-image-container a img {
+  border: 1px solid #f7f7f0;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.blog-image-container {
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 70px;
+}
+.blog-image-container:hover .blog-image {
+  opacity: 0.3;
+}
+
+.blog-image-container:hover .middle {
+  opacity: 1;
+}
+
+.blog-image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+
+.pagination .btn-dark:hover {
+  color: #24252a;
+  background: white;
+}
+
+/*END BLOG*/
+
+/*BLOG ITEM*/
+.blog-image-item {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  padding: 1rem;
+  box-shadow: 0 2px 2px rgb(108 117 125 / 40%);
+}
+
+.blog-article-tags-container a{
+  text-decoration: none;
+  margin-left: 10px;
+}
+.media-object {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.sinlge-post-meta li {
+  background: #f0f0e9;
+  float: left;
+  margin-right: 10px;
+  padding: 0 5px;
+  color: #393b3b;
+  position: relative;
+}
+.sinlge-post-meta li i {
+  background: #e2173d;
+  color: #fff;
+  margin-left: -4px;
+  margin-right: 7px;
+  padding: 4px 7px;
+}
+@media(max-width: 576px) {
+  .sinlge-post-meta li {
+    float: none;
+    margin-top: 15px;
+  }
+  .blog-post-area .post-meta ul li {
+    float: none;
+    margin-top: 15px;
+  }
+}
+/*END BLOG ITEM*/
+
+/*LOGIN*/
+.or {
+  border-radius: 40px;
+  font-size: 16px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  text-align: center;
+  width: 50px;
+}
+.login-form .form-group {
+  margin-bottom: 20px;
+}
+#form .container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+/*END LOGIN*/
+
+/*FAQ*/
+@media (min-width: 768px) {
+  .order-last-faq {
+    order: 6 !important;
+  }
+}
+/*END FAQ*/
+
+/*SCROLL UP BUTTON*/
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background: white;
+  color: #e2173d;
+}
+/*END SCROLL UP BUTTON*/

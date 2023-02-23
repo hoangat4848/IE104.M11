@@ -1,0 +1,80 @@
+@use "../custom" as *;
+@use "../utils/mixins" as m;
+
+.product-card {
+  background-color: $black;
+  border: none;
+  transition: all 0.2s;
+  box-shadow: 0px 1px 8px rgba($black, 0.4);
+
+  .product-card--img {
+    position: relative;
+    padding-bottom: 30%;
+    margin-bottom: 0;
+  }
+
+  .card-img-top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+    // object-position: center;
+    transition: opacity 0.4s;
+    transform: translateY(-50%);
+  }
+
+  .card-img-overlay {
+    opacity: 0;
+    background-color: rgba($black, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+    font-size: 1.2rem;
+  }
+
+  .card-body {
+    padding: m.rem(8) m.rem(12);
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+  }
+
+  .product-card--info {
+    overflow: hidden;
+  }
+
+  .product-card--title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  .product-card--price {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    padding-left: 1rem;
+  }
+
+  .product-card--price::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #6c757d;
+    left: 0;
+    top: 0;
+  }
+
+  & > div:hover {
+    cursor: pointer;
+    .card-img-overlay {
+      opacity: 1;
+    }
+  }
+}

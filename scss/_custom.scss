@@ -5,6 +5,7 @@
 // COPY VARIABLES YOU WANT TO OVERIDE HERE
 
 // Color
+// $primary: rgb(255, 159, 50);
 $primary: #e2173d;
 $secondary: #fff;
 $dark: #252729;
@@ -15,5 +16,22 @@ $body-bg: #fff;
 $border-radius: 0;
 $border-radius-sm: 0;
 $border-radius-lg: 0;
+
+$btn-focus-width: 0;
+$btn-focus-box-shadow: 0;
+
+// Font
+
+@font-face {
+  font-family: "Futura Bold";
+  src: url(../fonts/Futura\ Bold.otf);
+}
+
+// -Roboto Slab (base font)
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800;900&display=swap");
+$font-family-base: "Roboto Slab", Arial, sans-serif;
+
+//Transition
+
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

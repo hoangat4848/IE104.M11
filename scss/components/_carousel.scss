@@ -1,5 +1,17 @@
+.carousel-indicators {
+  position: relative;
+}
+
 .carousel-indicators > button[type="button"] {
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 100%;
+}
+
+.carousel-item {
+  transition: transform 1s ease-in-out;
+}
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s 5s;
 }

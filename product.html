@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0ec71743ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Product</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+    <link rel="stylesheet" href="./assets/css/style-custom.min.css" />
+  </head>
+  <body>
+    <!-- Sub Navbar -->
+    <nav class="subNavbar bg-primary navbar-expand-md" id="subNavbar">
+      <div class="container-lg">
+        <button
+          class="navbar-toggler text-secondary"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#subNavbarNav"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle sub navigation"
+        >
+          <ion-icon
+            name="menu-sharp"
+            class="custom-navbar-toggler-icon"
+          ></ion-icon>
+        </button>
+        <div class="navbar-collapse collapse" id="subNavbarNav">
+          <ul
+            class="navbar-nav flex-md-row flex-column justify-content-end w-100"
+          >
+            <li class="nav-item me-3">
+              <div class="nav-link link-secondary">
+                <ion-icon name="call-sharp"></ion-icon> +012456789
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link link-secondary">
+                <ion-icon name="mail-sharp"></ion-icon>
+                chiizza@chiizza.com
+              </div>
+            </li>
+            <li class="nav-item ms-md-auto me-3">
+              <a class="nav-link link-secondary" href="faq.html">
+                <ion-icon name="help-circle-sharp"></ion-icon>
+                <span class="d-md-none">Faq</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-secondary" href="login.html">
+                <ion-icon name="log-in-sharp"></ion-icon>
+                <span class="d-md-none">Login</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End of subNavbar -->
+    <!-- HEADER NAVIGATION -->
+    <header class="mainNavbar">
+      <nav class="navbar navbar-expand-lg bg-white fw-bolder py-3">
+        <div class="container-lg">
+          <!-- Hamburger button for mobile devices -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternal"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <ion-icon
+              name="menu-sharp"
+              class="custom-navbar-toggler-icon"
+            ></ion-icon>
+          </button>
+
+          <!-- Navbar brand (LOGO) -->
+          <a class="navbar-brand me-auto me-lg-5 text-primary" href="index.html"
+            ><img src="assets/images/logo.svg" alt="Chiizza logo" width="100"
+          /></a>
+
+          <!-- Navbar collapse hide for mobile devicess -->
+          <div class="navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="menu.html">MENU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blogs.html">BLOGS</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Header cart -->
+          <a href="checkout.html" class="header-cart">
+            <ion-icon name="cart-outline"></ion-icon>
+            <span class="cart-number"></span>
+          </a>
+
+          <!-- ORDER NOW button -->
+          <a href="menu.html" class="btn-lg"
+            ><button class="btn btn-primary" type="button">ORDER NOW</button></a
+          >
+        </div>
+      </nav>
+
+      <!-- External navigation show when click the navbar toggler (used for mobile) -->
+      <div
+        class="navbar-external-collapse collapse bg-primary fw-bolder pt-5"
+        id="navbarToggleExternal"
+      >
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="menu.html">MENU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blogs.html">BLOG</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- END OF HEADER -->
+
+    <!-- PAGE CONTENT -->
+    <main class="page-content-container bg-dark min-vh-100">
+      <div class="container-lg py-3">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="menu.html">Menu</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Pepperoni Pizza
+            </li>
+          </ol>
+        </nav>
+        <!-- Start of Product -->
+        <section class="product">
+          <div class="row">
+            <!-- Product images -->
+            <div class="col-md-6 product-imgs mb-3 mb-lg-0">
+              <div class="product-img-selected mb-3">
+                <img
+                  src="assets/images/product/pepperoni-pizza.jpg"
+                  alt=""
+                  class="img-fluid w-100 h-100"
+                />
+              </div>
+              <div class="product-simg-group">
+                <div class="product-small-img">
+                  <img
+                    src="assets/images/product/pepperoni-pizza.jpg"
+                    alt=""
+                    class=""
+                  />
+                </div>
+                <div class="product-small-img">
+                  <img
+                    src="assets/images/product/vegetable-pizza.jpg"
+                    alt=""
+                    class=""
+                  />
+                </div>
+                <div class="product-small-img">
+                  <img
+                    src="assets/images/product/ultimate-vegan-pizza.jpg"
+                    alt=""
+                    class=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-md-6 product-detail text-secondary">
+              <h3 class="product-name h2">Pepperoni Pizza</h3>
+
+              <div class="product-desc">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum pretium vitae quam a varius. Ut interdum leo
+                  libero, et venenatis turpis scelerisque eget. In tempus
+                  blandit enim, in volutpat nulla condimentum elementum. Nam non
+                  lorem est. Ut ante sapien, maximus vitae massa sed, commodo
+                  varius sapien. In pharetra erat sit amet mauris maximus
+                  imperdiet. Vivamus blandit tincidunt tristique.
+                </p>
+                <p>
+                  Etiam in odio viverra, auctor nisl nec, maximus sem. Fusce
+                  velit neque, rutrum in lacinia in, egestas aliquam nisl.
+                  Maecenas a odio tempor, tincidunt lectus in, eleifend neque.
+                  Vestibulum quis lobortis quam, et interdum neque. Aenean
+                  facilisis nisi velit, ac viverra leo cursus a. Nam at
+                  condimentum urna. Proin non consequat libero. Mauris pulvinar
+                  lorem id lectus egestas, ac tempor nisl elementum. Sed finibus
+                  quis sem id sodales. Cras vel scelerisque sapien, a dignissim
+                  ipsum. Quisque vel ligula vulputate, laoreet elit nec,
+                  faucibus lectus. Fusce sit amet lacinia urna, in iaculis
+                  magna.
+                </p>
+              </div>
+
+              <p class="product-price h4">$7.00</p>
+
+              <div class="input-group mb-3">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-minus productQuantityMinus"
+                >
+                  <ion-icon name="remove-sharp"></ion-icon>
+                </button>
+
+                <input
+                  type="number"
+                  name="productQuantity"
+                  id="productQuantity"
+                  class="form-control-sm productQuantity text-center"
+                  value="1"
+                  min="0"
+                  max="50"
+                />
+
+                <button
+                  type="button"
+                  class="btn btn-primary btn-plus productQuantityPlus"
+                >
+                  <ion-icon name="add-sharp"></ion-icon>
+                </button>
+              </div>
+
+              <div class="btn-group-lg">
+                <a href="#"
+                  ><button class="btn btn-primary product-add-btn p-3">
+                    Add to cart
+                  </button></a
+                >
+                <a href="checkout.html"
+                  ><button class="btn btn-outline-primary p-3">
+                    Checkout now
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of Product -->
+
+        <!-- RELATED PRODUCT SECTION -->
+
+        <section class="related container-lg py-5">
+          <h2 class="text-primary text-center title">You may also like</h2>
+
+          <div class="related-products row row-cols-md-3 g-3 text-light">
+            <!-- TODO cho thêm product cards vào đây :) -->
+            <!-- Product card -->
+            <div class="col">
+              <div class="product-card card">
+                <div class="position-relative">
+                  <!-- <a href="product.html" class="stretched-link"></a> -->
+                  <figure class="product-card--img overflow-hidden">
+                    <img
+                      class="card-img-top"
+                      src="assets/images/product/original-fried-chicken.jpg"
+                      alt="Og Fried Chicken"
+                    />
+                    <div class="card-img-overlay">View more..</div>
+                  </figure>
+                  <div class="product-card-body card-body">
+                    <div class="product-card--info">
+                      <h4 class="product-card--title text-truncate">
+                        Og Fried Chicken
+                      </h4>
+                      <p class="product-card--desc text-truncate">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate nisi, accusamus libero quibusdam eaque ducimus
+                        ipsa dignissimos nam dolor, voluptatem pariatur
+                        voluptates tempore odit nostrum.
+                      </p>
+                    </div>
+                    <div class="product-card--price">
+                      <span class="text-muted">price</span>
+                      <span class="h4">5$</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary add-cart">
+                  <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                </button>
+              </div>
+            </div>
+            <!-- End of Product card -->
+
+            <!-- Product card -->
+            <div class="col">
+              <div class="product-card card">
+                <div class="position-relative">
+                  <!-- <a href="product.html" class="stretched-link"></a> -->
+                  <figure class="product-card--img overflow-hidden">
+                    <img
+                      class="card-img-top"
+                      src="assets/images/product/cream-sauce-chicken.jpg"
+                      alt="Cream sauce chicken"
+                    />
+                    <div class="card-img-overlay">View more..</div>
+                  </figure>
+                  <div class="product-card-body card-body">
+                    <div class="product-card--info">
+                      <h4 class="product-card--title text-truncate">
+                        Cream sauce chicken
+                      </h4>
+                      <p class="product-card--desc text-truncate">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate nisi, accusamus libero quibusdam eaque ducimus
+                        ipsa dignissimos nam dolor, voluptatem pariatur
+                        voluptates tempore odit nostrum.
+                      </p>
+                    </div>
+                    <div class="product-card--price">
+                      <span class="text-muted">price</span>
+                      <span class="h4">7$</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary add-cart">
+                  <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                </button>
+              </div>
+            </div>
+            <!-- End of Product card -->
+
+            <!-- Product card -->
+            <div class="col">
+              <div class="product-card card">
+                <div class="position-relative">
+                  <!-- <a href="product.html" class="stretched-link"></a> -->
+                  <figure class="product-card--img overflow-hidden">
+                    <img
+                      class="card-img-top"
+                      src="assets/images/product/baby-ball-chicken.jpg"
+                      alt="Baby ball chicken"
+                    />
+                    <div class="card-img-overlay">View more..</div>
+                  </figure>
+                  <div class="product-card-body card-body">
+                    <div class="product-card--info">
+                      <h4 class="product-card--title text-truncate">
+                        Baby ball chicken
+                      </h4>
+                      <p class="product-card--desc text-truncate">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate nisi, accusamus libero quibusdam eaque ducimus
+                        ipsa dignissimos nam dolor, voluptatem pariatur
+                        voluptates tempore odit nostrum.
+                      </p>
+                    </div>
+                    <div class="product-card--price">
+                      <span class="text-muted">price</span>
+                      <span class="h4">6$</span>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary add-cart">
+                  <ion-icon name="bag-add-sharp"></ion-icon> Add to cart
+                </button>
+              </div>
+            </div>
+            <!-- End of Product card -->
+          </div>
+        </section>
+
+        <!-- END OF RELATED PRODUCT SECTION -->
+      </div>
+      <!-- END OF PAGE CONTENT -->
+    </main>
+
+    <!-- SCRIPT -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/checkValidForm.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <!-- Ionic Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
